@@ -55,11 +55,11 @@
 
 5. **Запускайте програму у Wayland-сеансі через `seatd-launch` (рекомендовано):**
    ```bash
-   seatd-launch -- ./build/autostrafe_external
+   seatd-launch -- ./build/mouse_direction_binder
    ```
    Якщо `seatd` недоступний, можна запустити від `root`, але це менш безпечно:
    ```bash
-   sudo QT_QPA_PLATFORM=wayland ./build/autostrafe_external
+   sudo QT_QPA_PLATFORM=wayland ./build/mouse_direction_binder
    ```
 
    При автоматичному режимі доступу перший запуск покаже діалог «Надати доступ». Після підтвердження `pkexec` виконає `setfacl`, щоб надати поточному користувачу права читання/запису до відповідних пристроїв.

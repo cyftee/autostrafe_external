@@ -47,19 +47,19 @@
 
 4. **Клонуйте репозиторій та зберіть проєкт:**
    ```bash
-   git clone https://github.com/<your-account>/mouse-direction-sync.git
-   cd mouse-direction-sync
+   git clone https://github.com/cyftee/autostrafe_external.git
+   cd autostrafe_external
    cmake -S . -B build -G Ninja
    cmake --build build
    ```
 
 5. **Запускайте програму у Wayland-сеансі через `seatd-launch` (рекомендовано):**
    ```bash
-   seatd-launch -- ./build/mouse_direction_binder
+   seatd-launch -- ./build/autostrafe_external
    ```
    Якщо `seatd` недоступний, можна запустити від `root`, але це менш безпечно:
    ```bash
-   sudo QT_QPA_PLATFORM=wayland ./build/mouse_direction_binder
+   sudo QT_QPA_PLATFORM=wayland ./build/autostrafe_external
    ```
 
    При автоматичному режимі доступу перший запуск покаже діалог «Надати доступ». Після підтвердження `pkexec` виконає `setfacl`, щоб надати поточному користувачу права читання/запису до відповідних пристроїв.
